@@ -9,7 +9,7 @@ def get_all_iphone_div(url):
     :param url:
     :return: the div with all iphone references
     """
-    reponse = urllib.request.urlopen('https://www.backmarket.fr/search?q=Iphone%2012&ga_search=Iphone%2012')
+    reponse = urllib.request.urlopen(url)
     documents_bien_parse = BeautifulSoup(reponse.read(), 'html.parser')
     grosse_div = documents_bien_parse('div', {'class': '_22EzdAoZfEubZZ9CBuovRl'})
     all_iphones = grosse_div[0].find_all('a', {})
@@ -25,7 +25,8 @@ def get_iphone_all_details(iphone):
     capacity, color, current state and price and return them.
 
     """
-    sleep(20)
+    all_statistique=[]
+    sleep(10)
     racine = 'https://www.backmarket.fr'
     lien = racine + iphone.get('href')
     page_iphone = BeautifulSoup(urllib.request.urlopen(lien).read(), 'html.parser')
@@ -52,10 +53,12 @@ def get_iphone_all_details(iphone):
                                (current_state.contents[0]
                                     .find_all('p')[1].contents[0]
                                     .string.strip()
+                                    .replace("\u202f","")
                                     .replace(",", ".")[:-2])
-                return name, capacity, color, state, price
+                all_statistique.append([name, capacity, color, state, price, lien])
             except AttributeError:
                 """ Catch errors due to finding mention like 'déjà vendu' instead of a price """
                 pass
+        return all_statistique
     else:
         return None, None, None, None, None

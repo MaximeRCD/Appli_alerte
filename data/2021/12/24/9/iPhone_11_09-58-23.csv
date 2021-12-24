@@ -1,0 +1,28 @@
+model,stockage,couleur,etat,prix
+iPhone 11,64,Noir,État correct,446.00
+iPhone 11,64,Rouge,État correct,420.00
+iPhone 11,64,Mauve,État correct,480.00
+iPhone 11,128,Noir,État correct,532.00
+iPhone 11,64,Blanc,État correct,475.00
+iPhone 11 Pro,64,Gris sidéral,État correct,553.00
+iPhone 11,128,Mauve,État correct,524.00
+iPhone 11 Pro,64,Vert nuit,État correct,550.00
+iPhone 11,128,Rouge,État correct,511.00
+iPhone 11,64,Vert,État correct,441.00
+iPhone 11 Pro,256,Gris sidéral,État correct,609.00
+iPhone 11,128,Blanc,État correct,514.00
+iPhone 11 Pro,256,Vert nuit,État correct,608.99
+iPhone 11 Pro Max,64,Vert nuit,État correct,632.00
+iPhone 11 Pro Max,64,Gris sidéral,État correct,640.00
+iPhone 11 Pro Max,256,Gris sidéral,État correct,710.00
+iPhone 11,128,Vert,État correct,540.00
+iPhone 11 Pro Max,256,Vert nuit,État correct,719.00
+iPhone 11 Pro,256,Or,État correct,644.00
+iPhone 11,64,Jaune,État correct,478.00
+iPhone 11 Pro Max,64,Or,État correct,646.00
+iPhone 11 Pro,64,Or,État correct,565.00
+iPhone 11,128,Jaune,État correct,525.00
+iPhone 11,256,Noir,État correct,589.90
+iPhone 11 Pro,256,Argent,État correct,616.00
+iPhone 11 Pro,64,Argent,État correct,565.00
+iPhone 11 Pro Max,64,Argent,État correct,649.00

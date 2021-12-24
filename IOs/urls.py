@@ -4,7 +4,7 @@ def read_urls():
     :return: a list of urls
     """
     all_urls = []
-    with open("searched_urls.txt") as file_of_urls:
+    with open("C:\\Users\\maxim\\PYTHON\\Appli_alerte\\searched_urls.txt") as file_of_urls:
         for index, line in enumerate(file_of_urls.readlines()):
             all_urls.append(line.strip())
     file_of_urls.close()

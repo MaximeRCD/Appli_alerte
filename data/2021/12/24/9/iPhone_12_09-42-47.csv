@@ -1,0 +1,29 @@
+model,stockage,couleur,etat,prix
+iPhone 12,64,Noir,État correct,666.00
+iPhone 12,64,Bleu,État correct,689.00
+iPhone 12 mini,64,Bleu,État correct,555.00
+iPhone 12 Pro,128,Bleu pacifique,État correct,796.00
+iPhone 12 mini,64,Noir,État correct,636.84
+iPhone 12,64,(PRODUCT)Red,État correct,685.00
+iPhone 12,128,Bleu,État correct,720.00
+iPhone 12,64,Blanc,Très bon état,745.00
+iPhone 12 Pro,128,Graphite,État correct,805.00
+iPhone 12,128,Noir,État correct,725.00
+iPhone 12 Pro Max,128,Bleu pacifique,État correct,930.00
+iPhone 12,64,Vert,État correct,690.00
+iPhone 12 mini,128,Bleu,État correct,624.00
+iPhone 12 mini,128,Blanc,État correct,618.00
+iPhone 12 mini,128,Noir,État correct,623.00
+iPhone 12 mini,64,Blanc,État correct,588.00
+iPhone 12 mini,64,(PRODUCT)Red,État correct,599.00
+iPhone 12 Pro,256,Bleu pacifique,État correct,830.00
+iPhone 12 Pro Max,256,Bleu pacifique,État correct,978.00
+iPhone 12,64,Mauve,État correct,739.00
+iPhone 12 Pro,128,Or,État correct,855.00
+iPhone 12,128,Blanc,État correct,779.00
+iPhone 12 Pro Max,128,Graphite,État correct,949.00
+iPhone 12,128,(PRODUCT)Red,État correct,725.00
+iPhone 12 Pro Max,256,Graphite,État correct,984.00
+iPhone 12 Pro,256,Graphite,État correct,880.00
+iPhone 12 mini,64,Mauve,État correct,669.00
+iPhone 12 mini,64,Vert,État correct,640.00

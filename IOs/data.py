@@ -14,13 +14,13 @@ def open_init_data_file(type_iphone):
         os.makedirs(path)
 
     f = open(f"{path}\\{type_iphone}_{time.strftime('%H-%M-%S')}.csv", 'w', encoding='UTF-8')
-    f.write(f"model,stockage,couleur,etat,prix\n")
+    f.write(f"model,stockage,couleur,etat,prix,lien\n")
     return f
 
 
-def fill_file(file, name, capacite, couleur, state, price):
+def fill_file(file, name, capacite, couleur, state, price, lien):
     if name != None:
-        file.write(f"{name},{capacite},{couleur},{state},{price}\n")
+        file.write(f"{name},{capacite},{couleur},{state},{price},{lien}\n")
 
 
 def close_file(file: _io.TextIOWrapper):
