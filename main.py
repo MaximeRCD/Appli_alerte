@@ -7,7 +7,6 @@ from scrap.scrapping import get_all_iphone_div, get_iphone_all_details
 
 if __name__ == '__main__':
 
-    # def main_action():
     all_urls = read_urls()
     print(all_urls)
     for url in all_urls:

@@ -2,5 +2,10 @@
   "stockage": 64,
   "etat": "État correct",
   "prix": 720,
-  "couleur": ["Bleu","(PRODUCT)Red"]}
+  "couleur": ["Bleu","(PRODUCT)Red"]},
+{"model": "iPhone 11",
+  "stockage": 64,
+  "etat": "Parfait état",
+  "prix": 300,
+  "couleur": ["Noir","Blanc"]}
 ]

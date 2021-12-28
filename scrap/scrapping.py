@@ -26,7 +26,7 @@ def get_iphone_all_details(iphone):
 
     """
     all_statistique=[]
-    sleep(10)
+    sleep(60)
     racine = 'https://www.backmarket.fr'
     lien = racine + iphone.get('href')
     page_iphone = BeautifulSoup(urllib.request.urlopen(lien).read(), 'html.parser')
