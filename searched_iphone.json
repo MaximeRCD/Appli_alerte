@@ -1,11 +1,3 @@
-[{"model": "iPhone 12 mini",
-  "stockage": 64,
-  "etat": "État correct",
-  "prix": 720,
-  "couleur": ["Bleu","(PRODUCT)Red"]},
-{"model": "iPhone 11",
-  "stockage": 64,
-  "etat": "Parfait état",
-  "prix": 300,
-  "couleur": ["Noir","Blanc"]}
-]
+[{"email": "python.price.advertiser@gmail.com", "model": "iPhone 12 mini", "stockage": 64, "etat": "État correct", "prix": 720, "couleur": "Bleu"},
+  {"email": "python.price.advertiser@gmail.com", "model": "iPhone 11", "stockage": 64, "etat": "Parfait état", "prix": 550, "couleur": "Jaune"},
+  {"email": "python.price.advertiser@gmail.com", "model": "iPhone 12 mini", "stockage": 64, "etat": "État correct", "couleur": "Noir", "prix": 700}]
