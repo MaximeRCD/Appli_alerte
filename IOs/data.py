@@ -8,7 +8,7 @@ def open_init_data_file(type_iphone):
     :return: file in which we wite scrapped data
     """
     timestamp = time.strptime(time.strftime("%Y/%m/%d %H:%M:%S"), "%Y/%m/%d %H:%M:%S")
-    path = f"C:\\Users\\maxim\\PYTHON\\Appli_alerte\\data\\{timestamp.tm_year}\\{timestamp.tm_mon}\\{timestamp.tm_mday}\\{timestamp.tm_hour}"
+    path = f".\\data\\{timestamp.tm_year}\\{timestamp.tm_mon}\\{timestamp.tm_mday}\\{timestamp.tm_hour}"
 
     if not os.path.exists(path):
         os.makedirs(path)

@@ -8,7 +8,7 @@ def search_in_db():
 
     searched_iphone = find_iphones()
     timestamp = time.strptime(time.strftime("%Y/%m/%d %H:%M:%S"), "%Y/%m/%d %H:%M:%S")
-    path = f"C:\\Users\\maxim\\PYTHON\\Appli_alerte\\data\\{timestamp.tm_year}\\{timestamp.tm_mon}\\{timestamp.tm_mday}"
+    path = f".\\data\\{timestamp.tm_year}\\{timestamp.tm_mon}\\{timestamp.tm_mday}"
     #print(searched_iphone)
     #print(path)
     csv_path = glob.glob(f"{path}\\*\\*.csv")
