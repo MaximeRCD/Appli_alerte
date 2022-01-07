@@ -1,10 +1,13 @@
 import tkinter as tk
+from tkinter import messagebox
+
 from IOs.iphone import append_new_iphone
 from IOs.data import open_init_data_file, fill_file, close_file
 from IOs.urls import read_urls
 from alerts.alert_by_email import send_email
 from alerts.find_potential_iphones import search_in_db
 from scrap.scrapping import get_all_iphone_div, get_iphone_all_details
+from utils.utility import test_email
 
 
 def scrapping_window(root):
@@ -66,7 +69,10 @@ def email_window(root):
 
     def email_sender():
         user_email = email.get()
-        send_email(user_email, search_in_db())
+        if test_email(user_email):
+            send_email(user_email, search_in_db())
+        else:
+            messagebox.showerror("Error", "Your email address is not valid, please enter the right one")
 
     # Button to send email
     tk.Button(child_email, text="Send an email", command=email_sender).place(x=0, y=220)
@@ -134,8 +140,10 @@ def register_window(root):
         state = state_var.get()
         stockage = stockage_var.get()
         model = model_var.get()
-
-        append_new_iphone(user_email, model, stockage, state, color, price)
+        if test_email(user_email):
+            append_new_iphone(user_email, model, stockage, state, color, price)
+        else:
+            messagebox.showerror("Error", "Your email address is not valid")
 
     tk.Button(child_register, text="Save Profil", command=register_user).place(x=0, y=260)
     tk.Button(child_register, text="Quit", command=child_register.destroy).place(x=250, y=260)
