@@ -39,6 +39,7 @@ def scrapping_window(root):
                     except TypeError:
                         pass
             close_file(file)
+        print('Scrapping is finished !!!!')
     # Button to send email
     tk.Button(child_scrapping, text="Send a scrap on BackMarket", command=scrapping_function).place(x=0, y=220)
     # quit button
