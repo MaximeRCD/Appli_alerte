@@ -22,6 +22,6 @@ def append_new_iphone(email, model, stockage, etat, couleur, prix):
     iphone_tableau.append(iphone_searched)
     print(iphone_tableau)
 
-    with open(".\\searched_iphone.json", mode='w', encoding='UTF_8') as f:
+    with open("searched_iphone.json", mode='w', encoding='UTF_8') as f:
         f.write(json.dumps(iphone_tableau, ensure_ascii=False))
 
