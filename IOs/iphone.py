@@ -6,7 +6,7 @@ def read_iphone_searched():
     From the searched_iphone file
     :return: a list of iphone
     """
-    with open(".\\searched_iphone.json", encoding='UTF_8') as file_of_searched_iphones:
+    with open("searched_iphone.json", encoding='UTF_8') as file_of_searched_iphones:
         return json.loads(file_of_searched_iphones.read())
 
 
