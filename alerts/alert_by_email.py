@@ -19,7 +19,8 @@ def send_email(user_email,iphone_found):
             for all_tel in iphone_found[iphone["model"]]:
                 # print(all_tel)
                 for tel in all_tel:
-                    if tel[1] == iphone["stockage"] and tel[2] == iphone["couleur"] and tel[3] == iphone["etat"] and tel[4] <= iphone["prix"]:
+                    print(f"Comparaison des noms : {tel[0]} ;  {iphone['model'].lower().replace(' ','')}")
+                    if tel[0] == iphone['model'].lower().replace(" ","") and tel[1] == iphone["stockage"] and tel[2] == iphone["couleur"] and tel[3] == iphone["etat"] and tel[4] <= iphone["prix"]:
                         subject = "Iphone Found Go Get It !!!"
                         body = f"We have found your desired Iphone: \n" \
                                f"Let's recap : Your were demanding an Iphone with some specs here is one which satisfies all of them !! \n" \
