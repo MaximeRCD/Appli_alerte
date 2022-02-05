@@ -71,11 +71,11 @@ $ python -m venv .venv
 ```
 Activer le venv : 
 ```bash
-$ source ./venv/lib/activate 
+$ source .venv/bin/activate 
  ```    
 ou 
  ```bash
-$ source ./venv/Script/activate
+$ source .venv/Script/activate
  ```    
 Verifier l'activation du venv :
     
