@@ -1,5 +1,24 @@
 # Appli_alerte
 
+## Avant Propos : 
+En partant d'une page blanche, vous devez créer un programme python manipulant des données de diverses manières :
+
+lecture / écriture / modification d'un fichier de configuration (type config.ini par exemple) avec des paires clef-valeur
+fichiers de sortie liés à un traitement interne (création de fichiers PDF, gestion d'un fichier top-scores par exemple)
+réaliser un traitement de données : à partir de données/fichiers en entrées, créer des données/fichiers en sortie
+pas d'obligation d'interface graphique
+pas d'obligation de bases de données
+Si interface graphique : fenêtre en 1366*768, ou réglages via le fichier de configuration !
+Exemples de précédentes réalisations :
+
+Jeu de société avec IA poussée (if then else) : Monopoly, Scotland Yard, Yams ou autre jeu de dés, Mastermind, Touché coulé. 6 qui prend, Loup Garou, Démineur
+Jeu casino avec sauvegarde et consultation de top score
+Script pour manipuler ses comptes Facebook et Twitter
+Récupérer l'article du jour / aléatoire de Wikipédia et le poster sur un autre site
+Télécharger un site complet - aspirateur de site - robot crawler
+Conversion de fichiers xx to PDF, PDF to xx
+Editeur de PDF
+
 ## 0. Contexte
 
 Ce programme python constitue notre projet rendu pour le module de langage script.
@@ -36,5 +55,39 @@ Les données récupérées dans un tableau python sont transformées et
 stockées au format csv dans des dossiers partitionnés.
 
 ## 3. 
+
+## 4. Installation et utilisation du projet
+
+### 4.1 Récupération du projet
+
+Lancer la commande 
+```bash
+$ git clone https://github.com/MaximeRCD/Appli_alerte.git
+ ```    
+
+Créer un environnement virtuel afin de tester le projet
+```bash
+$ python -m venv .venv
+```
+Activer le venv : 
+```bash
+$ source ./venv/lib/activate 
+ ```    
+ou 
+ ```bash
+$ source ./venv/Script/activate
+ ```    
+Verifier l'activation du venv :
+    
+    (venv) doit apparaitre dans le terminal
+
+Insatller les dépendances : 
+```bash
+$ pip install -r ./requierements.txt
+ ```    
+Lancer le programme:
+```bash
+$ python ./main.py
+ ```    
 
 
