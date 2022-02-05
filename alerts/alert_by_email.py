@@ -10,10 +10,14 @@ def send_email(user_email,iphone_found):
 
 
     for iphone in searched_iphone:
-        #print(iphone)
+        # print(iphone)
+        # print(user_email)
+        # print(iphone["email"])
         if user_email == iphone["email"]:
             to = [iphone["email"]]
+            # print(to)
             for all_tel in iphone_found[iphone["model"]]:
+                # print(all_tel)
                 for tel in all_tel:
                     if tel[1] == iphone["stockage"] and tel[2] == iphone["couleur"] and tel[3] == iphone["etat"] and tel[4] <= iphone["prix"]:
                         subject = "Iphone Found Go Get It !!!"
