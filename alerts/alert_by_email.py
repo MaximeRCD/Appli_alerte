@@ -1,26 +1,23 @@
 import smtplib
-from IOs.iphone import read_iphone_searched as find_iphones
+from IOs.iphone import read_iphone_searched as find_clients
 
 
 def send_email(user_email,iphone_found):
+    """Used to send an email to the person who has precised its  email adress"""
+
     gmail_user = 'python.price.advertiser@gmail.com'
     gmail_password = 'Python123'
-    searched_iphone = find_iphones()
+
+    client_profils = find_clients()
     sent_from = gmail_user
 
 
-    for iphone in searched_iphone:
-        # print(iphone)
-        # print(user_email)
-        # print(iphone["email"])
-        if user_email == iphone["email"]:
-            to = [iphone["email"]]
-            # print(to)
-            for all_tel in iphone_found[iphone["model"]]:
-                # print(all_tel)
+    for client in client_profils:
+        if user_email == client["email"]:
+            to = [client["email"]]
+            for all_tel in iphone_found[client["model"]]:
                 for tel in all_tel:
-                    print(f"Comparaison des noms : {tel[0]} ;  {iphone['model'].lower().replace(' ','')}")
-                    if tel[0] == iphone['model'].lower().replace(" ","") and tel[1] == iphone["stockage"] and tel[2] == iphone["couleur"] and tel[3] == iphone["etat"] and tel[4] <= iphone["prix"]:
+                    if tel[0] == client['model'].lower().replace(" ","") and tel[1] == client["stockage"] and tel[2] == client["couleur"] and tel[3] == client["etat"] and tel[4] <= client["prix"]:
                         subject = "Iphone Found Go Get It !!!"
                         body = f"We have found your desired Iphone: \n" \
                                f"Let's recap : Your were demanding an Iphone with some specs here is one which satisfies all of them !! \n" \
@@ -45,7 +42,7 @@ def send_email(user_email,iphone_found):
                             server.sendmail(sent_from, to, msg.encode('UTF_8'))
                             server.close()
 
-                            print('Email sent!')
+                            print(f'Email sent to {client["email"]}!')
                         except:
                             print('Something went wrong...')
 

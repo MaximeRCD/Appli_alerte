@@ -5,7 +5,7 @@ import os
 
 def open_init_data_file(type_iphone):
     """
-    :return: file in which we wite scrapped data
+    :return: file in which we write scrapped data
     """
     timestamp = time.strptime(time.strftime("%Y/%m/%d %H:%M:%S"), "%Y/%m/%d %H:%M:%S")
     path = os.path.abspath(f"./data/{timestamp.tm_year}/{timestamp.tm_mon}/{timestamp.tm_mday}/{timestamp.tm_hour}")
@@ -19,12 +19,11 @@ def open_init_data_file(type_iphone):
 
 
 def fill_file(file, name, capacite, couleur, state, price, lien):
+    """ Used to fill the csv file with scrapped data"""
     if name != None:
         file.write(f"{name},{capacite},{couleur},{state},{price},{lien}\n")
 
 
 def close_file(file: _io.TextIOWrapper):
-    """
-    :type file: TextIO
-    """
+    """ Close the csv file """
     file.close()

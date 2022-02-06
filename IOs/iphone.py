@@ -3,14 +3,14 @@ import json
 
 def read_iphone_searched():
     """
-    From the searched_iphone file
-    :return: a list of iphone
+    Return the list of client's profil as json object
     """
     with open("searched_iphone.json", encoding='UTF_8') as file_of_searched_iphones:
         return json.loads(file_of_searched_iphones.read())
 
 
 def append_new_iphone(email, model, stockage, etat, couleur, prix):
+    """ Append a new profil to the client file : searched_iphone.json """
     iphone_searched = {"email": email,
                        "model": model,
                        "stockage": int(stockage),
