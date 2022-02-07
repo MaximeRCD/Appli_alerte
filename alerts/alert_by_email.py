@@ -1,16 +1,15 @@
-import smtplib
+import smtplib, ssl
 from IOs.iphone import read_iphone_searched as find_clients
 
 
 def send_email(user_email,iphone_found):
     """Used to send an email to the person who has precised its  email adress"""
 
-    gmail_user = 'python.price.advertiser@gmail.com'
-    gmail_password = 'Python123'
+    gmail_user = 'pythopriceadvertiser@gmail.com'
+    gmail_application_password = 'nwhylcpchkymjvta'
 
     client_profils = find_clients()
     sent_from = gmail_user
-
 
     for client in client_profils:
         if user_email == client["email"]:
@@ -34,16 +33,16 @@ def send_email(user_email,iphone_found):
                                f"Baye and Maxime."
 
                         msg = f"Subject:{subject}\n\n{body}"
+                        print(tel)
 
                         try:
-                            server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+                            server = smtplib.SMTP('smtp.gmail.com', 587)
                             server.ehlo()
-                            server.login(gmail_user, gmail_password)
+                            server.starttls(context=ssl.create_default_context())
+                            server.login(gmail_user, gmail_application_password)
+                            server.ehlo()
                             server.sendmail(sent_from, to, msg.encode('UTF_8'))
-                            server.close()
-
+                            server.quit()
                             print(f'Email sent to {client["email"]}!')
-                        except:
-                            print('Something went wrong...')
-
-    print("Hey, email has been sent!")
+                        except Exception as e:
+                            print(e)
