@@ -156,6 +156,8 @@ def register_window(root):
                 messagebox.showerror("Error", "The price must be between 100 and 99 999 € and a positive integer")
         else:
             messagebox.showerror("Error", "Your email address is not valid")
+        messagebox.showinfo("Great News", f"You have well registered yourself !")
+
 
 
 
