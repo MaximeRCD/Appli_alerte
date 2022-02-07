@@ -12,7 +12,7 @@ def send_email(user_email,iphone_found):
 
     client_profils = find_clients()
     sent_from = gmail_user
-
+    number_of_sent_email = 0
     for client in client_profils:
         if user_email == client["email"]:
             to = [client["email"]]
@@ -36,7 +36,7 @@ def send_email(user_email,iphone_found):
 
                         msg = f"Subject:{subject}\n\n{body}"
                         print(tel)
-
+                        number_of_sent_email += 1
                         try:
                             server = smtplib.SMTP('smtp.gmail.com', 587)
                             server.ehlo()
@@ -47,4 +47,8 @@ def send_email(user_email,iphone_found):
                             server.quit()
                             messagebox.showinfo("Great News", f"An email has been sent to {client['email']} !")
                         except Exception as e:
-                            print(e)
+                            messagebox.showerror("Very Bad News", f"The following error occured {e}. Please contact us at :"
+                                                                  f"pythopriceadvertiser@gmail.com")
+            if number_of_sent_email == 0:
+                messagebox.showinfo("Bad News", f"Sorry, We did not find your desired Iphone ! "
+                                                f"Try to launch another Scrap or come back later.")
