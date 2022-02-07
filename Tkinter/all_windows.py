@@ -7,7 +7,7 @@ from IOs.urls import read_urls
 from alerts.alert_by_email import send_email
 from alerts.find_potential_iphones import search_in_db
 from scrap.scrapping import get_all_iphone_div, get_iphone_all_details
-from utils.utility import test_email
+from utils.utility import test_email, test_price, email_in_db
 
 
 def scrapping_window(root):
@@ -40,7 +40,7 @@ def scrapping_window(root):
                     except TypeError:
                         pass
             close_file(file)
-        print('Scrapping is finished !!!!')
+        messagebox.showinfo("Great News", f"The Scrapping is finished !")
     # Button to send email
     tk.Button(child_scrapping, text="Send a scrap on BackMarket", command=scrapping_function).place(x=0, y=220)
     # quit button
@@ -73,10 +73,13 @@ def email_window(root):
 
     def email_sender():
         user_email = email.get()
-        if test_email(user_email):
-            send_email(user_email, search_in_db())
+        if email_in_db(user_email):
+            if test_email(user_email):
+                send_email(user_email, search_in_db())
+            else:
+                messagebox.showerror("Error", "Your email address is not valid, please enter the right one")
         else:
-            messagebox.showerror("Error", "Your email address is not valid, please enter the right one")
+            messagebox.showerror("Error", "You are not register yet or you misspell your email please retry or register !")
 
     # Button to send email
     tk.Button(child_email, text="Send an email", command=email_sender).place(x=0, y=220)
@@ -106,7 +109,7 @@ def register_window(root):
     tk.Label(child_register, text="Iphone Stockage :").place(x=0, y=140)
     tk.Label(child_register, text="Iphone Renoved State :").place(x=0, y=170)
     tk.Label(child_register, text="Iphone Color :").place(x=0, y=200)
-    tk.Label(child_register, text="Maximum Price Desired : ").place(x=0, y=230)
+    tk.Label(child_register, text="Maximum Price Desired(€):").place(x=0, y=230)
 
     liste_model = ["iPhone 12", "iPhone 12 mini", "iPhone 12 Pro", "iPhone 12 Pro Max", "iPhone 11",
                    "iPhone 11 Pro", "iPhone 11 Pro Max"]
@@ -147,9 +150,14 @@ def register_window(root):
         stockage = stockage_var.get()
         model = model_var.get()
         if test_email(user_email):
-            append_new_iphone(user_email, model, stockage, state, color, price)
+            if test_price(price):
+                append_new_iphone(user_email, model, stockage, state, color, price)
+            else:
+                messagebox.showerror("Error", "The price must be between 100 and 99 999 € and a positive integer")
         else:
             messagebox.showerror("Error", "Your email address is not valid")
+
+
 
     tk.Button(child_register, text="Save Profil", command=register_user).place(x=0, y=260)
     tk.Button(child_register, text="Quit", command=child_register.destroy).place(x=250, y=260)

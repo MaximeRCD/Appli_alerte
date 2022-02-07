@@ -1,4 +1,6 @@
 import smtplib, ssl
+from tkinter import messagebox
+
 from IOs.iphone import read_iphone_searched as find_clients
 
 
@@ -43,6 +45,6 @@ def send_email(user_email,iphone_found):
                             server.ehlo()
                             server.sendmail(sent_from, to, msg.encode('UTF_8'))
                             server.quit()
-                            print(f'Email sent to {client["email"]}!')
+                            messagebox.showinfo("Great News", f"An email has been sent to {client['email']} !")
                         except Exception as e:
                             print(e)
