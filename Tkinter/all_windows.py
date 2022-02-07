@@ -152,10 +152,10 @@ def register_window(root):
         if test_email(user_email):
             if test_price(price):
                 append_new_iphone(user_email, model, stockage, state, color, price)
+                messagebox.showinfo("Great News", f"You have well registered yourself !")
             else:
                 messagebox.showerror("Error", "The price must be between 100 and 99 999 € and a positive integer")
         else:
             messagebox.showerror("Error", "Your email address is not valid")
-        messagebox.showinfo("Great News", f"You have well registered yourself !")
     tk.Button(child_register, text="Save Profil", command=register_user).place(x=0, y=260)
     tk.Button(child_register, text="Quit", command=child_register.destroy).place(x=250, y=260)
