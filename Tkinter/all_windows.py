@@ -157,9 +157,5 @@ def register_window(root):
         else:
             messagebox.showerror("Error", "Your email address is not valid")
         messagebox.showinfo("Great News", f"You have well registered yourself !")
-
-
-
-
     tk.Button(child_register, text="Save Profil", command=register_user).place(x=0, y=260)
     tk.Button(child_register, text="Quit", command=child_register.destroy).place(x=250, y=260)

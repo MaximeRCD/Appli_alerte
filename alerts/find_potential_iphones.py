@@ -20,6 +20,7 @@ def search_in_db():
         iphone_data = iphone_data[iphone_data.prix <= tel["prix"]]
         iphone_data = iphone_data[iphone_data.etat == tel["etat"]]
         iphone_data = iphone_data[iphone_data.couleur == tel["couleur"]]
+        iphone_data.drop_duplicates()
         try:
             iphone_found[tel["model"]].append(iphone_data.values.tolist())
         except:
