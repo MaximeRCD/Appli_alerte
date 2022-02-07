@@ -90,4 +90,17 @@ Lancer le programme:
 $ python ./main.py
  ```    
 
+# 5. Parcours Utilisateur
+## 5.1 Register
+
+Please click on register button to register yourself and choose the iphone you want.
+
+## 5.2 Get an email
+
+Please click on send an email button and enter the email you used to register !
+
+## 5.3 Perform a scrap
+
+Please click on update database button to perform scrapping and get fresh data !
+
 
