@@ -14,6 +14,8 @@ if __name__ == '__main__':
                            "Register. If you already have an\n"
                            "account please click send email.\n\n"
                            "Else quit or update DB (1h aprox)")
+    #disabled text modifications in this window
+    text["state"] = "disabled"
     text.insert(tk.END, "")
     text.pack()
     # Button to update data

@@ -19,8 +19,9 @@ def scrapping_window(root):
                            "The process is an hour long.\n\n"
                            "If you want to update the database\n"
                            "Please click on Send a Scrap\n\n"
-                           "Else Quit to go back to main menu."
-                )
+                           "Else Quit to go back to main menu.")
+    # disabled text modifications in this window
+    text["state"] = "disabled"
     text.insert(tk.END, "")
     text.pack()
     def scrapping_function():
@@ -61,6 +62,8 @@ def email_window(root):
                            "and click on Send an Email.\n\n"
                            "Else Quit to go back to main menu."
                 )
+    # disabled text modifications in this window
+    text["state"] = "disabled"
     text.insert(tk.END, "")
     text.pack()
 
@@ -93,6 +96,8 @@ def register_window(root):
                            "desired Iphone and send the alert\n"
                            "by email!\n\n"
                 )
+    # disabled text modifications in this window
+    text["state"] = "disabled"
     text.insert(tk.END, "")
     text.pack()
 
