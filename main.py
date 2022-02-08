@@ -6,6 +6,7 @@ from Tkinter.all_windows import scrapping_window, email_window, register_window
 if __name__ == '__main__':
     root = tk.Tk()
     root.geometry("300x250")
+    root.resizable(False,False)
     text = tk.Text(root)
     text.insert(tk.INSERT, "This application is useful to be\n"
                            "alerted by email if we find an\n"

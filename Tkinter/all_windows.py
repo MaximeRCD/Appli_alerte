@@ -14,6 +14,7 @@ def scrapping_window(root):
     child_scrapping = tk.Toplevel(root)
     child_scrapping.geometry("300x250")
     child_scrapping.title("Scrapping Window")
+    child_scrapping.resizable(False, False)
     text = tk.Text(child_scrapping)
     text.insert(tk.INSERT, "This part is used to scrap BackMarket\n"
                            "The process is an hour long.\n\n"
@@ -51,6 +52,7 @@ def email_window(root):
     child_email = tk.Toplevel(root)
     child_email.geometry("300x250")
     child_email.title("Email Window")
+    child_email.resizable(False, False)
 
     text = tk.Text(child_email)
     text.insert(tk.INSERT, "This part is used to send email\n"
@@ -92,6 +94,7 @@ def register_window(root):
     child_register.geometry("300x300")
     child_register.grid()
     child_register.title("Registration Window")
+    child_register.resizable(False, False)
 
     text = tk.Text(child_register)
     text.insert(tk.INSERT, "This part is used to register\n"
