@@ -45,7 +45,13 @@ ces données feront l'objet d'étude de tendance d'évolution du prix.
 
 Dans le module scrap, dans le fichier scrapping, on retrouve l'ensemble des 
 fonctions qui nous ont permis de récupérer les données sur le site de 
-Backmarket.
+Backmarket. 
+**Attention le lancement de cette partie dans l'application dure environ une heure car il y a un timeout de 60 secondes entre deux récuperations de données**
+Nous vous avons d'ors et déjà fait une récupération de données pour le mois de mars donc vous pouvez tester toutes les autres fonctionnalités avant de lancer un scrapt.
+Si vous lancez le code à partir du 01/03/2022, il faudra d'abord réaliser un scrap des données avant de pouvoir recevoir des mails. Nous avons fait le choix de récupérer les donnéés sur une période d'un mois 
+afin d"avoir des données assez fraiche sans devoir run pendant une heure un scrapping de façon trop régulière!!
+Si vous souhaitez toute fois requêter les données plus souvent il est possible de changer le chemin d'accès aux données à la ligne 10 du fichier *./alerts/find_potential_iphones.py*.
+Il faudra s'assurer que le scrapping a été réalisé avant d'essayer d'obtenir un mail qui va requêter la base.
 
 ## 2. Storing data
 
