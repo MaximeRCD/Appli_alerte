@@ -1,5 +1,5 @@
 # Appli_alerte
-
+Ce projet constitue le rendu pour le module de programmation script Python pour le Groupe RICHAUDEAU / FALL
 ## Avant Propos : 
 En partant d'une page blanche, vous devez créer un programme python manipulant des données de diverses manières :
 
